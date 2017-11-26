@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "XLSlideMenu.h"
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<SlideMenuButtonTapDelegate>
+{
+    
+}
+@property(nonatomic,strong)UIImageView * titleImgView;
 
 -(instancetype)init;
+
+
 @end
 

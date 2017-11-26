@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "UIViewController+XLSlideMenu.h"
 
+@protocol SlideMenuButtonTapDelegate
+-(void)buttonPressedForPushViewController:(UIViewController*)viewController;
+@end
+
 @interface XLSlideMenu : UIViewController
+
+@property (nonatomic,strong) id<SlideMenuButtonTapDelegate> delegate;
+
 //主视图
 @property (nonatomic, strong) UIViewController *rootViewController;
 //左侧视图

@@ -58,14 +58,15 @@
     //mainViewCtrl.title = @"Main";
     
     UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:mainViewCtrl];
-    nav.tabBarItem.title = @"First";
-    nav.navigationItem.title = @"Main";
+    nav.delegate = mainViewCtrl;
+    //nav.tabBarItem.title = @"First";
+    //nav.navigationItem.title = @"Main";
 //    [mainViewCtrl.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"China_Airlines"]  forBarMetrics:UIBarMetricsCompactPrompt];
-    UIImageView * titleImgView = [[UIImageView alloc]init];
-    titleImgView.frame = CGRectMake(125, 20, 150, 40);
-    titleImgView.center = CGPointMake(mainViewCtrl.navigationController.navigationBar.frame.size.width/2, mainViewCtrl.navigationController.navigationBar.frame.size.height/2 + 16);
-    [titleImgView setImage:[UIImage imageNamed:@"China_Airlines"]];
-    [mainViewCtrl.navigationController.view addSubview:titleImgView];
+    mainViewCtrl.titleImgView = [[UIImageView alloc]init];
+    mainViewCtrl.titleImgView.frame = CGRectMake(125, 20, 150, 40);
+    mainViewCtrl.titleImgView.center = CGPointMake(mainViewCtrl.navigationController.navigationBar.frame.size.width/2, mainViewCtrl.navigationController.navigationBar.frame.size.height/2 + 16);
+    [mainViewCtrl.titleImgView setImage:[UIImage imageNamed:@"China_Airlines"]];
+    [mainViewCtrl.navigationController.view addSubview:mainViewCtrl.titleImgView];
     //[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"China_Airlines" ofType:@"png"]];
     //[nav.navigationBar setTintColor:[UIColor blackColor]];
 //    [nav.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
@@ -85,15 +86,24 @@
     tabBarController.viewControllers = tabItems;
     
     UINavigationController * rootNav = [[UINavigationController alloc]initWithRootViewController:tabBarController];
+    rootNav.navigationItem.title = @"Main";
 #pragma mark -- deal with slide menu
     LeftViewController * leftVC = [[LeftViewController alloc]init];
     RightViewController * rightVC = [[RightViewController alloc]init];
     
     XLSlideMenu * slideMenu = [[XLSlideMenu alloc]initWithRootViewController:tabBarController];
+    slideMenu.delegate = mainViewCtrl;
     slideMenu.leftViewController = leftVC;
     slideMenu.rightViewController = rightVC;
 #pragma mark -- deal with root tabBarController
     [self.window setRootViewController:slideMenu];
+    UIViewController * topController = [self topViewController:slideMenu];
+    NSLog(@"The current top most uiviewcontroller is %@",[topController class]);
+    NSLog(@"The number of viewcontrollers of topcontroller is %i",(int)topController.childViewControllers.count);
+    int num =(int)topController.childViewControllers.count;
+    for(int idx = 0 ; idx < num ; idx++){
+        NSLog(@"This is %i viewcontroller, it is %@",idx,[topController.childViewControllers[idx] class]);
+    }
     self.window.backgroundColor = [UIColor clearColor];
     return YES;
 }
@@ -124,6 +134,30 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark --- utility function finding topmost viewcontroller
+
+- (UIViewController *)topViewController{
+    return [self topViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
+}
+
+- (UIViewController *)topViewController:(UIViewController *)rootViewController
+{
+    if (rootViewController.presentedViewController == nil) {
+        return rootViewController;
+    }
+    
+    if ([rootViewController.presentedViewController isMemberOfClass:[UINavigationController class]]) {
+        UINavigationController *navigationController = (UINavigationController *)rootViewController.presentedViewController;
+        UIViewController *lastViewController = [[navigationController viewControllers] lastObject];
+        return [self topViewController:lastViewController];
+    }
+    UIViewController *presentedViewController = (UIViewController *)rootViewController.presentedViewController;
+    return [self topViewController:presentedViewController];
+}
+
+#pragma mark end --- utility function finding topmost viewcontroller
+
 
 
 @end

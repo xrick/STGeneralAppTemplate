@@ -33,7 +33,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Tips";
+    return @"類別";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -72,9 +72,17 @@
             [self.xl_sldeMenu showRootViewControllerAnimated:true];
             UIViewController *vc = [[UIViewController alloc] init];
             vc.title = @"新界面";
-            vc.view.backgroundColor = [UIColor whiteColor];
-            UINavigationController *nav = (UINavigationController *)self.xl_sldeMenu.rootViewController;
-            [nav pushViewController:vc animated:true];
+            vc.view.backgroundColor = [UIColor lightGrayColor];
+            UINavigationBar * uvb = [[UINavigationBar alloc]init];
+            uvb.frame = CGRectMake(0, 0, 375, 22);
+            uvb.backgroundColor = [UIColor brownColor];
+            [vc.view addSubview:uvb];
+            
+            //UINavigationController *nav = (UINavigationController *)self.xl_sldeMenu.rootViewController.navigationController;
+//            [[UIApplication.sharedApplication delegate].window.rootViewController.navigationController pushViewController:vc animated:true];
+            [self.xl_sldeMenu.delegate buttonPressedForPushViewController:vc];
+            //[self.xl_sldeMenu.rootViewController.navigationController pushViewController:vc animated:true];
+            //[nav pushViewController:vc animated:true];
         }
             break;
         case 4:

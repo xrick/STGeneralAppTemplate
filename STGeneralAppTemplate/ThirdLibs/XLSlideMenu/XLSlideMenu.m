@@ -28,7 +28,7 @@ static CGFloat MinActionSpeed = 500;
 @end
 
 @implementation XLSlideMenu
-
+@synthesize delegate;
 -(instancetype)initWithRootViewController:(UIViewController*)rootViewController{
     if (self = [super init]) {
         _rootViewController = rootViewController;
