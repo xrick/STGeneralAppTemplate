@@ -83,7 +83,8 @@
     
     UITabBarController * tabBarController = [[UITabBarController alloc]init];
     tabBarController.viewControllers = tabItems;
-    //UINavigationController * rootNav = [[UINavigationController alloc]initWithRootViewController:tabBarController];
+    
+    UINavigationController * rootNav = [[UINavigationController alloc]initWithRootViewController:tabBarController];
 #pragma mark -- deal with slide menu
     LeftViewController * leftVC = [[LeftViewController alloc]init];
     RightViewController * rightVC = [[RightViewController alloc]init];
