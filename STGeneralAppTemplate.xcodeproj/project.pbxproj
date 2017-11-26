@@ -15,6 +15,10 @@
 		AEEFD2761FC9CC24005DCF68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD2751FC9CC24005DCF68 /* main.m */; };
 		AEEFD27F1FC9D094005DCF68 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD27D1FC9D094005DCF68 /* SecondViewController.m */; };
 		AEEFD2801FC9D094005DCF68 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEFD27E1FC9D094005DCF68 /* SecondViewController.xib */; };
+		AEEFD29F1FCA8453005DCF68 /* UIViewController+XLSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD29C1FCA8453005DCF68 /* UIViewController+XLSlideMenu.m */; };
+		AEEFD2A01FCA8453005DCF68 /* XLSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD29E1FCA8453005DCF68 /* XLSlideMenu.m */; };
+		AEEFD2A71FCA881D005DCF68 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD2A31FCA881D005DCF68 /* RightViewController.m */; };
+		AEEFD2A81FCA881D005DCF68 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD2A41FCA881D005DCF68 /* LeftViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,14 @@
 		AEEFD27C1FC9D094005DCF68 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		AEEFD27D1FC9D094005DCF68 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		AEEFD27E1FC9D094005DCF68 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		AEEFD29B1FCA8453005DCF68 /* UIViewController+XLSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XLSlideMenu.h"; sourceTree = "<group>"; };
+		AEEFD29C1FCA8453005DCF68 /* UIViewController+XLSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XLSlideMenu.m"; sourceTree = "<group>"; };
+		AEEFD29D1FCA8453005DCF68 /* XLSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSlideMenu.h; sourceTree = "<group>"; };
+		AEEFD29E1FCA8453005DCF68 /* XLSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSlideMenu.m; sourceTree = "<group>"; };
+		AEEFD2A31FCA881D005DCF68 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		AEEFD2A41FCA881D005DCF68 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		AEEFD2A51FCA881D005DCF68 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		AEEFD2A61FCA881D005DCF68 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,8 @@
 		AEEFD2651FC9CC24005DCF68 /* STGeneralAppTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				AEEFD2A21FCA87F3005DCF68 /* Controllers */,
+				AEEFD29A1FCA8426005DCF68 /* ThirdLibs */,
 				AEEFD2661FC9CC24005DCF68 /* AppDelegate.h */,
 				AEEFD2671FC9CC24005DCF68 /* AppDelegate.m */,
 				AEEFD2691FC9CC24005DCF68 /* MainViewController.h */,
@@ -77,6 +91,36 @@
 				AEEFD27E1FC9D094005DCF68 /* SecondViewController.xib */,
 			);
 			path = STGeneralAppTemplate;
+			sourceTree = "<group>";
+		};
+		AEEFD29A1FCA8426005DCF68 /* ThirdLibs */ = {
+			isa = PBXGroup;
+			children = (
+				AEEFD2A11FCA847F005DCF68 /* XLSlideMenu */,
+			);
+			path = ThirdLibs;
+			sourceTree = "<group>";
+		};
+		AEEFD2A11FCA847F005DCF68 /* XLSlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AEEFD29B1FCA8453005DCF68 /* UIViewController+XLSlideMenu.h */,
+				AEEFD29C1FCA8453005DCF68 /* UIViewController+XLSlideMenu.m */,
+				AEEFD29D1FCA8453005DCF68 /* XLSlideMenu.h */,
+				AEEFD29E1FCA8453005DCF68 /* XLSlideMenu.m */,
+			);
+			path = XLSlideMenu;
+			sourceTree = "<group>";
+		};
+		AEEFD2A21FCA87F3005DCF68 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEEFD2A51FCA881D005DCF68 /* LeftViewController.h */,
+				AEEFD2A41FCA881D005DCF68 /* LeftViewController.m */,
+				AEEFD2A61FCA881D005DCF68 /* RightViewController.h */,
+				AEEFD2A31FCA881D005DCF68 /* RightViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEFD2A71FCA881D005DCF68 /* RightViewController.m in Sources */,
+				AEEFD2A81FCA881D005DCF68 /* LeftViewController.m in Sources */,
 				AEEFD27F1FC9D094005DCF68 /* SecondViewController.m in Sources */,
 				AEEFD26B1FC9CC24005DCF68 /* MainViewController.m in Sources */,
 				AEEFD2761FC9CC24005DCF68 /* main.m in Sources */,
 				AEEFD2681FC9CC24005DCF68 /* AppDelegate.m in Sources */,
+				AEEFD2A01FCA8453005DCF68 /* XLSlideMenu.m in Sources */,
+				AEEFD29F1FCA8453005DCF68 /* UIViewController+XLSlideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -54,27 +54,45 @@
     NSMutableArray * tabItems = [[NSMutableArray alloc] initWithCapacity:2];
     MainViewController * mainViewCtrl = [[MainViewController alloc]init];
     mainViewCtrl.view.backgroundColor = [UIColor whiteColor];
+    
+    //mainViewCtrl.title = @"Main";
+    
     UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:mainViewCtrl];
     nav.tabBarItem.title = @"First";
-    mainViewCtrl.navigationItem.title = @"First";
-    [mainViewCtrl.navigationController.navigationBar setTintColor:[UIColor blackColor]];
-    mainViewCtrl.navigationController.navigationBar.backgroundColor =[UIColor blackColor];
+    nav.navigationItem.title = @"Main";
+//    [mainViewCtrl.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"China_Airlines"]  forBarMetrics:UIBarMetricsCompactPrompt];
+    UIImageView * titleImgView = [[UIImageView alloc]init];
+    titleImgView.frame = CGRectMake(125, 20, 150, 40);
+    titleImgView.center = CGPointMake(mainViewCtrl.navigationController.navigationBar.frame.size.width/2, mainViewCtrl.navigationController.navigationBar.frame.size.height/2 + 16);
+    [titleImgView setImage:[UIImage imageNamed:@"China_Airlines"]];
+    [mainViewCtrl.navigationController.view addSubview:titleImgView];
     //[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"China_Airlines" ofType:@"png"]];
-    [nav.navigationBar setTintColor:[UIColor blackColor]];
+    //[nav.navigationBar setTintColor:[UIColor blackColor]];
+//    [nav.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
     [tabItems addObject:nav];
     
     SecondViewController * optionViewCtrl = [[SecondViewController alloc]init];
-    
+    optionViewCtrl.title = @"More";
     UINavigationController * optNav = [[UINavigationController alloc]initWithRootViewController:optionViewCtrl];
     optNav.tabBarItem.title = @"Second";
-    optNav.navigationItem.title = @"Second Nav";
-    optNav.navigationBar.backgroundColor = [UIColor lightGrayColor];
+    optionViewCtrl.navigationController.navigationItem.title = @"Second Nav";
+    optionViewCtrl.navigationController.navigationBar.backgroundColor = [UIColor lightGrayColor];
     [optNav.navigationBar setTintColor:[UIColor blackColor]];
     [tabItems addObject:optNav];
     
+    
     UITabBarController * tabBarController = [[UITabBarController alloc]init];
     tabBarController.viewControllers = tabItems;
-    [self.window setRootViewController:tabBarController];
+    //UINavigationController * rootNav = [[UINavigationController alloc]initWithRootViewController:tabBarController];
+#pragma mark -- deal with slide menu
+    LeftViewController * leftVC = [[LeftViewController alloc]init];
+    RightViewController * rightVC = [[RightViewController alloc]init];
+    
+    XLSlideMenu * slideMenu = [[XLSlideMenu alloc]initWithRootViewController:tabBarController];
+    slideMenu.leftViewController = leftVC;
+    slideMenu.rightViewController = rightVC;
+#pragma mark -- deal with root tabBarController
+    [self.window setRootViewController:slideMenu];
     self.window.backgroundColor = [UIColor clearColor];
     return YES;
 }

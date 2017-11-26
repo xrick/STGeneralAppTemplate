@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "XLSlideMenu.h"
 @interface MainViewController : UIViewController
 
 -(instancetype)init;

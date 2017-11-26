@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SecondViewController.h"
 #import "MainViewController.h"
+#import "XLSlideMenu.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
