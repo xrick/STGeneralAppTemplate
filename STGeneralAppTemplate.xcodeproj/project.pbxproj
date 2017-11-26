@@ -17,8 +17,8 @@
 		AEEFD2801FC9D094005DCF68 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEFD27E1FC9D094005DCF68 /* SecondViewController.xib */; };
 		AEEFD29F1FCA8453005DCF68 /* UIViewController+XLSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD29C1FCA8453005DCF68 /* UIViewController+XLSlideMenu.m */; };
 		AEEFD2A01FCA8453005DCF68 /* XLSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD29E1FCA8453005DCF68 /* XLSlideMenu.m */; };
-		AEEFD2A71FCA881D005DCF68 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD2A31FCA881D005DCF68 /* RightViewController.m */; };
-		AEEFD2A81FCA881D005DCF68 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD2A41FCA881D005DCF68 /* LeftViewController.m */; };
+		AEEFD2A71FCA881D005DCF68 /* LeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD2A31FCA881D005DCF68 /* LeftMenuController.m */; };
+		AEEFD2A81FCA881D005DCF68 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD2A41FCA881D005DCF68 /* RightViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +39,10 @@
 		AEEFD29C1FCA8453005DCF68 /* UIViewController+XLSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XLSlideMenu.m"; sourceTree = "<group>"; };
 		AEEFD29D1FCA8453005DCF68 /* XLSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSlideMenu.h; sourceTree = "<group>"; };
 		AEEFD29E1FCA8453005DCF68 /* XLSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSlideMenu.m; sourceTree = "<group>"; };
-		AEEFD2A31FCA881D005DCF68 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
-		AEEFD2A41FCA881D005DCF68 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
-		AEEFD2A51FCA881D005DCF68 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
-		AEEFD2A61FCA881D005DCF68 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		AEEFD2A31FCA881D005DCF68 /* LeftMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuController.m; sourceTree = "<group>"; };
+		AEEFD2A41FCA881D005DCF68 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		AEEFD2A51FCA881D005DCF68 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		AEEFD2A61FCA881D005DCF68 /* LeftMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +115,10 @@
 		AEEFD2A21FCA87F3005DCF68 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AEEFD2A51FCA881D005DCF68 /* LeftViewController.h */,
-				AEEFD2A41FCA881D005DCF68 /* LeftViewController.m */,
-				AEEFD2A61FCA881D005DCF68 /* RightViewController.h */,
-				AEEFD2A31FCA881D005DCF68 /* RightViewController.m */,
+				AEEFD2A51FCA881D005DCF68 /* RightViewController.h */,
+				AEEFD2A41FCA881D005DCF68 /* RightViewController.m */,
+				AEEFD2A61FCA881D005DCF68 /* LeftMenuController.h */,
+				AEEFD2A31FCA881D005DCF68 /* LeftMenuController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -195,8 +195,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEEFD2A71FCA881D005DCF68 /* RightViewController.m in Sources */,
-				AEEFD2A81FCA881D005DCF68 /* LeftViewController.m in Sources */,
+				AEEFD2A71FCA881D005DCF68 /* LeftMenuController.m in Sources */,
+				AEEFD2A81FCA881D005DCF68 /* RightViewController.m in Sources */,
 				AEEFD27F1FC9D094005DCF68 /* SecondViewController.m in Sources */,
 				AEEFD26B1FC9CC24005DCF68 /* MainViewController.m in Sources */,
 				AEEFD2761FC9CC24005DCF68 /* main.m in Sources */,

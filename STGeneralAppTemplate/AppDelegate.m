@@ -88,7 +88,7 @@
     UINavigationController * rootNav = [[UINavigationController alloc]initWithRootViewController:tabBarController];
     rootNav.navigationItem.title = @"Main";
 #pragma mark -- deal with slide menu
-    LeftViewController * leftVC = [[LeftViewController alloc]init];
+    LeftMenuController * leftVC = [[LeftMenuController alloc]init];
     RightViewController * rightVC = [[RightViewController alloc]init];
     
     XLSlideMenu * slideMenu = [[XLSlideMenu alloc]initWithRootViewController:tabBarController];

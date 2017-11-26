@@ -1,5 +1,5 @@
 //
-//  LeftViewController.h
+//  RightViewController.h
 //  XLSlideMenuExample
 //
 //  Created by MengXianLiang on 2017/5/8.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeftViewController : UIViewController
+@interface LeftMenuController : UIViewController
 
 @end

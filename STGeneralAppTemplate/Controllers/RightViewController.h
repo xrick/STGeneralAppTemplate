@@ -1,5 +1,5 @@
 //
-//  RightViewController.h
+//  LeftViewController.h
 //  XLSlideMenuExample
 //
 //  Created by MengXianLiang on 2017/5/8.
