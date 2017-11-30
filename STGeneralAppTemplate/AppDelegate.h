@@ -12,6 +12,7 @@
 #import "XLSlideMenu.h"
 #import "RightViewController.h"
 #import "LeftMenuController.h"
+#import "DAPagesContainer.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

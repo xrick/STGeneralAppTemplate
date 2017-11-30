@@ -63,7 +63,7 @@
             [self.xl_sldeMenu showRootViewControllerAnimated:true];
             break;
         case 1:
-            [self.xl_sldeMenu showLeftViewControllerAnimated:true];
+            //[self.xl_sldeMenu showLeftViewControllerAnimated:true]; //now to show the left slide menu.
             break;
         case 2:
             [self.xl_sldeMenu showRightViewControllerAnimated:true];
@@ -97,12 +97,12 @@
 #pragma mark -
 #pragma mark TableViewDelegate&DataSource
 - (NSArray *)titles {
-    return @[@"显示主界面",@"显示左菜单",@"显示右菜单",@"Push新界面",@"设置滑动开关"];
+    return @[@"隱藏選單",@"展示方格選單",@"連接socket server",@"加入新視圖",@"測試KVO",@"測試Local Notification"];
 }
 
 - (NSArray *)subTitles {
-    NSString *subTitle = self.xl_sldeMenu.slideEnabled ? @"(已打开)" : @"(已关闭)" ;
-    return @[@"",@"",@"",@"",subTitle];
+    //NSString *subTitle = self.xl_sldeMenu.slideEnabled ? @"(已打開)" : @"(已關閉)" ;
+    return @[@"",@"",@"",@"",@"",@""];
 }
 
 - (void)didReceiveMemoryWarning {

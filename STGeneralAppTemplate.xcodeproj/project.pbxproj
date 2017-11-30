@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE4C806B1FD056A00098C159 /* DAPageIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4C80671FD056A00098C159 /* DAPageIndicatorView.m */; };
+		AE4C806C1FD056A00098C159 /* DAPagesContainerTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4C80681FD056A00098C159 /* DAPagesContainerTopBar.m */; };
+		AE4C806D1FD056A00098C159 /* DAPagesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4C80691FD056A00098C159 /* DAPagesContainer.m */; };
 		AEEFD2681FC9CC24005DCF68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD2671FC9CC24005DCF68 /* AppDelegate.m */; };
 		AEEFD26B1FC9CC24005DCF68 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFD26A1FC9CC24005DCF68 /* MainViewController.m */; };
 		AEEFD26E1FC9CC24005DCF68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEFD26C1FC9CC24005DCF68 /* Main.storyboard */; };
@@ -22,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE4C80651FD056A00098C159 /* DAPagesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPagesContainer.h; sourceTree = "<group>"; };
+		AE4C80661FD056A00098C159 /* DAPageIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPageIndicatorView.h; sourceTree = "<group>"; };
+		AE4C80671FD056A00098C159 /* DAPageIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPageIndicatorView.m; sourceTree = "<group>"; };
+		AE4C80681FD056A00098C159 /* DAPagesContainerTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPagesContainerTopBar.m; sourceTree = "<group>"; };
+		AE4C80691FD056A00098C159 /* DAPagesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPagesContainer.m; sourceTree = "<group>"; };
+		AE4C806A1FD056A00098C159 /* DAPagesContainerTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPagesContainerTopBar.h; sourceTree = "<group>"; };
+		AE4C806F1FD05D6D0098C159 /* UI_Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI_Constants.h; sourceTree = "<group>"; };
 		AEEFD2631FC9CC24005DCF68 /* STGeneralAppTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STGeneralAppTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEFD2661FC9CC24005DCF68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AEEFD2671FC9CC24005DCF68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +66,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE4C80641FD0568F0098C159 /* DAPagesContainer */ = {
+			isa = PBXGroup;
+			children = (
+				AE4C80661FD056A00098C159 /* DAPageIndicatorView.h */,
+				AE4C80671FD056A00098C159 /* DAPageIndicatorView.m */,
+				AE4C80651FD056A00098C159 /* DAPagesContainer.h */,
+				AE4C80691FD056A00098C159 /* DAPagesContainer.m */,
+				AE4C806A1FD056A00098C159 /* DAPagesContainerTopBar.h */,
+				AE4C80681FD056A00098C159 /* DAPagesContainerTopBar.m */,
+			);
+			path = DAPagesContainer;
+			sourceTree = "<group>";
+		};
+		AE4C806E1FD05D480098C159 /* SharedConstants */ = {
+			isa = PBXGroup;
+			children = (
+				AE4C806F1FD05D6D0098C159 /* UI_Constants.h */,
+			);
+			path = SharedConstants;
+			sourceTree = "<group>";
+		};
 		AEEFD25A1FC9CC24005DCF68 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +106,7 @@
 		AEEFD2651FC9CC24005DCF68 /* STGeneralAppTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				AE4C806E1FD05D480098C159 /* SharedConstants */,
 				AEEFD2A21FCA87F3005DCF68 /* Controllers */,
 				AEEFD29A1FCA8426005DCF68 /* ThirdLibs */,
 				AEEFD2661FC9CC24005DCF68 /* AppDelegate.h */,
@@ -96,6 +128,7 @@
 		AEEFD29A1FCA8426005DCF68 /* ThirdLibs */ = {
 			isa = PBXGroup;
 			children = (
+				AE4C80641FD0568F0098C159 /* DAPagesContainer */,
 				AEEFD2A11FCA847F005DCF68 /* XLSlideMenu */,
 			);
 			path = ThirdLibs;
@@ -195,12 +228,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4C806B1FD056A00098C159 /* DAPageIndicatorView.m in Sources */,
+				AE4C806D1FD056A00098C159 /* DAPagesContainer.m in Sources */,
 				AEEFD2A71FCA881D005DCF68 /* LeftMenuController.m in Sources */,
 				AEEFD2A81FCA881D005DCF68 /* RightViewController.m in Sources */,
 				AEEFD27F1FC9D094005DCF68 /* SecondViewController.m in Sources */,
 				AEEFD26B1FC9CC24005DCF68 /* MainViewController.m in Sources */,
 				AEEFD2761FC9CC24005DCF68 /* main.m in Sources */,
 				AEEFD2681FC9CC24005DCF68 /* AppDelegate.m in Sources */,
+				AE4C806C1FD056A00098C159 /* DAPagesContainerTopBar.m in Sources */,
 				AEEFD2A01FCA8453005DCF68 /* XLSlideMenu.m in Sources */,
 				AEEFD29F1FCA8453005DCF68 /* UIViewController+XLSlideMenu.m in Sources */,
 			);

@@ -70,6 +70,8 @@
     //[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"China_Airlines" ofType:@"png"]];
     //[nav.navigationBar setTintColor:[UIColor blackColor]];
 //    [nav.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
+    nav.tabBarItem.title = @"first";
+    nav.tabBarItem.image = [UIImage imageNamed:@"handyman-tools"];
     [tabItems addObject:nav];
     
     SecondViewController * optionViewCtrl = [[SecondViewController alloc]init];
@@ -78,6 +80,7 @@
     optNav.tabBarItem.title = @"Second";
     optionViewCtrl.navigationController.navigationItem.title = @"Second Nav";
     optionViewCtrl.navigationController.navigationBar.backgroundColor = [UIColor lightGrayColor];
+    optNav.tabBarItem.image = [UIImage imageNamed:@"settings-gears"];
     [optNav.navigationBar setTintColor:[UIColor blackColor]];
     [tabItems addObject:optNav];
     
