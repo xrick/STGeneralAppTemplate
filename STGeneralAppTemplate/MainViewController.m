@@ -95,18 +95,43 @@
     [moreButton setImage:[UIImage imageNamed:@"more"] forState:UIControlStateNormal];
     [moreButton addTarget:self action:@selector(showRight) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:moreButton];
+    
+    [self createButton];
 }
 
 -(void)showLeft{
     [self.xl_sldeMenu showLeftViewControllerAnimated:true];
 }
 -(void)showRight{
-    [self.xl_sldeMenu showRightViewControllerAnimated:true];
+    //[self.xl_sldeMenu showRightViewControllerAnimated:true];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
     // Dispose of any resources that can be recreated.
+}
+
+-(void)createButton
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.layer.borderWidth = 1.5;
+    button.layer.borderColor = [UIColor blackColor].CGColor;
+    [button addTarget:self
+               action:@selector(tapButton:)
+     forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"Click Me" forState:UIControlStateNormal];
+    button.frame = CGRectMake(50.0, 150.0, 160.0, 40.0);
+    [self.view addSubview:button];
+}
+
+-(void)tapButton:(UIButton*)sender
+{
+    NSLog(@"Button tapped!");
+}
+
+-(void)createTextView
+{
+    
 }
 
 

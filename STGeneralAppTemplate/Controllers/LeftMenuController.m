@@ -33,7 +33,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"類別";
+    return @"功能選項";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -71,7 +71,7 @@
         case 3: {
             [self.xl_sldeMenu showRootViewControllerAnimated:true];
             UIViewController *vc = [[UIViewController alloc] init];
-            vc.title = @"新界面";
+            vc.title = @"New View";
             vc.view.backgroundColor = [UIColor lightGrayColor];
             UINavigationBar * uvb = [[UINavigationBar alloc]init];
             uvb.frame = CGRectMake(0, 0, 375, 22);
