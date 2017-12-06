@@ -80,7 +80,7 @@
             
             //UINavigationController *nav = (UINavigationController *)self.xl_sldeMenu.rootViewController.navigationController;
 //            [[UIApplication.sharedApplication delegate].window.rootViewController.navigationController pushViewController:vc animated:true];
-            [self.xl_sldeMenu.delegate buttonPressedForPushViewController:vc];
+            [self.xl_sldeMenu.delegate buttonPressedForPushViewController:vc withActionFlag:1];
             //[self.xl_sldeMenu.rootViewController.navigationController pushViewController:vc animated:true];
             //[nav pushViewController:vc animated:true];
         }
@@ -88,6 +88,11 @@
         case 4:
             self.xl_sldeMenu.slideEnabled = !self.xl_sldeMenu.slideEnabled;
             [tableView reloadData];
+            break;
+        case 5:
+            break;
+        case 6:
+            [self.xl_sldeMenu.delegate buttonPressedForPushViewController:nil withActionFlag:2];
             break;
         default:
             break;
@@ -97,12 +102,12 @@
 #pragma mark -
 #pragma mark TableViewDelegate&DataSource
 - (NSArray *)titles {
-    return @[@"隱藏選單",@"展示方格選單",@"連接socket server",@"加入新視圖",@"測試KVO",@"測試Local Notification"];
+    return @[@"隱藏選單",@"展示方格選單",@"連接socket server",@"加入新視圖",@"測試KVO",@"測試Local Notification",@"download"];
 }
 
 - (NSArray *)subTitles {
     //NSString *subTitle = self.xl_sldeMenu.slideEnabled ? @"(已打開)" : @"(已關閉)" ;
-    return @[@"",@"",@"",@"",@"",@""];
+    return @[@"",@"",@"",@"",@"",@"",@""];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,7 +10,7 @@
 #import "UIViewController+XLSlideMenu.h"
 
 @protocol SlideMenuButtonTapDelegate
--(void)buttonPressedForPushViewController:(UIViewController*)viewController;
+-(void)buttonPressedForPushViewController:(UIViewController*)viewController withActionFlag:(int)actionFlag;
 @end
 
 @interface XLSlideMenu : UIViewController

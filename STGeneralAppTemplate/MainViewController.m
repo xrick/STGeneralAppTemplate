@@ -57,11 +57,21 @@
 
 #pragma mark end --- utility function finding topmost viewcontroller
 
--(void)buttonPressedForPushViewController:(UIViewController *)viewController
+-(void)buttonPressedForPushViewController:(UIViewController *)viewController withActionFlag:(int)actionFlag
 {
-
-    [self.navigationController pushViewController:viewController animated:true];
-    self.titleImgView.hidden = true;
+    switch(actionFlag){
+        case 1: // add new viewController
+            [self.navigationController pushViewController:viewController animated:true];
+            self.titleImgView.hidden = true;
+            break;
+        case 2: // download test
+            [((UITabBarController*)self.parentViewController.parentViewController) setSelectedIndex:1];
+            //NSLog(@"The current indexed vc is class :%@",[self.parentViewController.parentViewController class]);
+            break;
+        default:
+            break;
+    }
+    
     
 }
 
