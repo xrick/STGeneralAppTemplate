@@ -77,12 +77,7 @@
             uvb.frame = CGRectMake(0, 0, 375, 22);
             uvb.backgroundColor = [UIColor brownColor];
             [vc.view addSubview:uvb];
-            
-            //UINavigationController *nav = (UINavigationController *)self.xl_sldeMenu.rootViewController.navigationController;
-//            [[UIApplication.sharedApplication delegate].window.rootViewController.navigationController pushViewController:vc animated:true];
             [self.xl_sldeMenu.delegate buttonPressedForPushViewController:vc withActionFlag:1];
-            //[self.xl_sldeMenu.rootViewController.navigationController pushViewController:vc animated:true];
-            //[nav pushViewController:vc animated:true];
         }
             break;
         case 4:
@@ -102,7 +97,7 @@
 #pragma mark -
 #pragma mark TableViewDelegate&DataSource
 - (NSArray *)titles {
-    return @[@"隱藏選單",@"展示方格選單",@"連接socket server",@"加入新視圖",@"測試KVO",@"測試Local Notification",@"download"];
+    return @[@"隱藏選單",@"展示方格選單",@"連接socket server",@"加入新視圖",@"測試KVC",@"測試Local Notification",@"download"];
 }
 
 - (NSArray *)subTitles {
